@@ -1,0 +1,14 @@
+/* 此文件重写了@jupyterlab/theme-light-extension/style/theme.css  中的部分样式
+用于解决 tt、code、kbd、samp、pre 样式污染问题 */
+
+@import '@jupyterlab/theme-light-extension/style/variables.css';
+
+.lm-Widget tt,
+.lm-Widget code,
+.lm-Widget kbd,
+.lm-Widget samp,
+.lm-Widget pre {
+  font-family: var(--jp-code-font-family);
+  font-size: var(--jp-code-font-size);
+  line-height: var(--jp-code-line-height);
+}

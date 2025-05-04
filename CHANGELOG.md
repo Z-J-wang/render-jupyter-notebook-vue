@@ -1,3 +1,11 @@
+## 2.2.5
+
+_2025-05-04_
+
+### Bug fixes
+
+- [#94](https://github.com/Z-J-wang/render-jupyter-notebook-vue/issues/94) 修复：Jupyter Theme 样式污染问题
+
 ## 2.2.4
 
 _2024-12-10_
