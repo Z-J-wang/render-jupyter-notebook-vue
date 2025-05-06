@@ -1,7 +1,7 @@
 <template>
-  <div class="home">
-    <el-container>
-      <el-header class="bg-white shadow sticky top-0 z-10">
+  <div class="home" :class="{ dark: !isLight }">
+    <el-container class="dark:bg-black">
+      <el-header class="bg-white dark:bg-black dark:text-white shadow sticky top-0 z-10">
         <div class="mx-auto flex flex-nowrap justify-between items-center" style="height: 60px">
           <div class="flex items-center gap-3">
             <a
@@ -15,7 +15,7 @@
             </a>
             <el-tooltip class="box-item" effect="light" content="View introduction" placement="top">
               <el-button plain link @click.stop="drawer = true">
-                <el-icon><Document /></el-icon>
+                <el-icon><Document class="dark:text-white" /></el-icon>
               </el-button>
             </el-tooltip>
           </div>
@@ -24,16 +24,16 @@
           </div>
         </div>
       </el-header>
-      <el-main class="mx-auto mt-4 mb-20 w-full">
+      <el-main class="mx-auto mt-4 mb-20 w-full dark:bg-black">
         <slot />
       </el-main>
 
-      <el-backtop :right="50" :bottom="80">
+      <el-backtop class="bg-white" :right="50" :bottom="80">
         <el-icon color="#f37726"><CaretTop /></el-icon>
       </el-backtop>
 
-      <el-footer class="bg-white shadow-lg text-center py-4 h-auto">
-        <el-text size="default">
+      <el-footer class="bg-white dark:bg-black shadow-lg text-center py-4 h-auto">
+        <el-text size="default" class="dark:text-white">
           Released under the
           <a class="underline hover:text-amber-500" href="https://github.com/vuejs/vitepress/blob/main/LICENSE"
             >MIT License</a
@@ -57,8 +57,12 @@ export default {
   components: { CaretTop, Document, TheAbout },
   data() {
     return {
-      drawer: false
+      drawer: false,
+      isLight: true
     };
+  },
+  mounted() {
+    this.isLight = window.matchMedia('(prefers-color-scheme: dark)')?.matches ? false : true;
   }
 };
 </script>
@@ -81,7 +85,6 @@ export default {
 .el-main {
   max-width: 1200px;
   min-height: calc(100vh - 140px - 6rem);
-  background-color: white;
 }
 
 .el-backtop:hover {
