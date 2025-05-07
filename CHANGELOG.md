@@ -1,3 +1,11 @@
+## 2.2.6
+
+_2025-05-07_
+
+### Features
+
+- [#102](https://github.com/Z-J-wang/render-jupyter-notebook-vue/issues/102) 新增暗模式样式的支持
+
 ## 2.2.5
 
 _2025-05-04_
