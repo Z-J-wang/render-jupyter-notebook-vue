@@ -24,7 +24,7 @@
           </div>
         </div>
       </el-header>
-      <el-main class="mx-auto mt-4 mb-20 w-full dark:bg-black">
+      <el-main class="mx-auto mt-4 mb-20 w-full bg-white dark:bg-black">
         <slot />
       </el-main>
 

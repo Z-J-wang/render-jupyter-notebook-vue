@@ -1,0 +1,7 @@
+/* 此文件为 highlight 主题样式文件，声明了暗模式和亮模式的的样式生效文件 */
+
+/* 暗模式使用暗主题 */
+@import url('highlight.js/styles/github-dark.min.css') (prefers-color-scheme: dark);
+
+/* 亮模式或者不支持暗模式的时候使用亮主题 */
+@import url('highlight.js/styles/github.css') (prefers-color-scheme: light) or (prefers-color-scheme: no-preference);

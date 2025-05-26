@@ -1,3 +1,11 @@
+## 2.2.7
+
+_2025-05-26_
+
+### Bug fixes
+
+- [#105](https://github.com/Z-J-wang/render-jupyter-notebook-vue/issues/105) markdown code 的主题为不会随着深色主题的切换而切换
+
 ## 2.2.6
 
 _2025-05-07_
