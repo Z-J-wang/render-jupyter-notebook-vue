@@ -1,6 +1,6 @@
 import markdown from 'markdown-it';
 import hljs from 'highlight.js';
-import 'highlight.js/styles/github.css';
+import '../../assets/css/jupyterlab/highlight.theme.css';
 
 export default markdown({
   html: true,
